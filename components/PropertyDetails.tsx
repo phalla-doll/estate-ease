@@ -1,7 +1,21 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { MapPin, Bed, Bath, Maximize, Car, DoorOpen, Utensils } from 'lucide-react';
+import Map, { Marker, Popup } from 'react-map-gl/maplibre';
+import 'maplibre-gl/dist/maplibre-gl.css';
+
+const locations = [
+  { id: 1, title: 'Midnight Ridge Villa', address: '440 Thamrin Jakarta, Indonesia', lat: -6.2088, lng: 106.8456, color: 'bg-blue-600', image: 'https://picsum.photos/seed/house3/100/80' },
+  { id: 2, title: 'Dream House Reality', address: 'Evergreen 14 Jakarta, Indonesia', lat: -6.215, lng: 106.835, color: 'bg-yellow-400', image: 'https://picsum.photos/seed/house1/100/80' },
+  { id: 3, title: 'Atap Langit Homes', address: 'Edelweis City Jakarta, Indonesia', lat: -6.195, lng: 106.855, color: 'bg-green-500', image: 'https://picsum.photos/seed/house2/100/80' },
+  { id: 4, title: 'Unity Urban Homes', address: 'Forest City Jakarta, Indonesia', lat: -6.225, lng: 106.865, color: 'bg-blue-600', image: 'https://picsum.photos/seed/house4/100/80' },
+];
 
 export default function PropertyDetails() {
+  const [hoveredLocation, setHoveredLocation] = useState<typeof locations[0] | null>(null);
+
   return (
     <div className="flex flex-col h-full">
       {/* Images */}
@@ -100,43 +114,54 @@ export default function PropertyDetails() {
 
       {/* Map */}
       <div className="relative h-[200px] rounded-3xl overflow-hidden mt-auto border border-slate-100">
-        <Image 
-          src="https://picsum.photos/seed/map/600/300" 
-          alt="Map" 
-          fill 
-          className="object-cover opacity-60"
-          referrerPolicy="no-referrer"
-        />
-        {/* Map overlay elements to simulate the UI */}
-        <div className="absolute inset-0 bg-slate-50/40 backdrop-blur-[1px]"></div>
-        
-        {/* Map Pins */}
-        <div className="absolute top-1/4 left-1/4 w-6 h-6 bg-blue-600 rounded-full border-2 border-white shadow-sm flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-        </div>
-        
-        <div className="absolute bottom-1/4 left-1/5 w-6 h-6 bg-yellow-400 rounded-full border-2 border-white shadow-sm flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-        </div>
-        
-        <div className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-blue-600 rounded-full border-2 border-white shadow-sm flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-        </div>
-        
-        <div className="absolute top-1/4 right-1/5 w-6 h-6 bg-green-500 rounded-full border-2 border-white shadow-sm flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
-          <div className="w-2 h-2 bg-white rounded-full"></div>
-        </div>
+        <Map
+          initialViewState={{
+            longitude: 106.8456,
+            latitude: -6.2088,
+            zoom: 12
+          }}
+          mapStyle="https://basemaps.cartocdn.com/gl/positron-gl-style/style.json"
+          interactive={true}
+        >
+          {locations.map((loc) => (
+            <Marker
+              key={loc.id}
+              longitude={loc.lng}
+              latitude={loc.lat}
+              anchor="center"
+            >
+              <div 
+                className={`w-6 h-6 ${loc.color} rounded-full border-2 border-white shadow-sm flex items-center justify-center hover:scale-110 transition-transform cursor-pointer`}
+                onMouseEnter={() => setHoveredLocation(loc)}
+                onMouseLeave={() => setHoveredLocation(null)}
+              >
+                <div className="w-2 h-2 bg-white rounded-full"></div>
+              </div>
+            </Marker>
+          ))}
 
-        {/* Selected Map Pin Info */}
-        <div className="absolute top-[30%] left-[30%] bg-white p-2.5 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.06)] flex items-center gap-3 max-w-[220px] border border-slate-100 pr-5">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-            <Image src="https://picsum.photos/seed/house3/100/80" alt="Thumb" fill className="object-cover" referrerPolicy="no-referrer" />
-          </div>
-          <div className="min-w-0 pr-2">
-            <p className="text-[11px] font-medium text-slate-900 truncate tracking-tight">Midnight Ridge Villa</p>
-            <p className="text-[9px] font-medium text-slate-500 truncate mt-0.5">440 Thamrin Jakarta, Indonesia</p>
-          </div>
-        </div>
+          {hoveredLocation && (
+            <Popup
+              longitude={hoveredLocation.lng}
+              latitude={hoveredLocation.lat}
+              anchor="bottom"
+              offset={15}
+              closeButton={false}
+              closeOnClick={false}
+              className="z-50"
+            >
+              <div className="bg-white p-2.5 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.06)] flex items-center gap-3 max-w-[220px] border border-slate-100 pr-5">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                  <Image src={hoveredLocation.image} alt="Thumb" fill className="object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <div className="min-w-0 pr-2">
+                  <p className="text-[11px] font-medium text-slate-900 truncate tracking-tight">{hoveredLocation.title}</p>
+                  <p className="text-[9px] font-medium text-slate-500 truncate mt-0.5">{hoveredLocation.address}</p>
+                </div>
+              </div>
+            </Popup>
+          )}
+        </Map>
       </div>
     </div>
   );
