@@ -76,7 +76,7 @@ export default function PropertyGrid() {
       {properties.map((property) => (
         <div 
           key={property.id} 
-          className={`bg-white rounded-xl overflow-hidden shadow-sm border transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${property.active ? 'border-blue-500 ring-1 ring-blue-500' : 'border-slate-100/50'}`}
+          className={`bg-white rounded-xl overflow-hidden shadow-[0_2px_10px_rgba(0,0,0,0.02)] border transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.04)] ${property.active ? 'border-blue-500 ring-1 ring-blue-500' : 'border-slate-100/50'}`}
         >
           <div className="relative h-[220px] w-full p-3.5">
             <div className="relative w-full h-full rounded-lg overflow-hidden">
@@ -87,7 +87,7 @@ export default function PropertyGrid() {
                 className="object-cover transition-transform duration-500 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-md text-[13px] font-medium text-slate-700 shadow-sm">
+              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-md text-[13px] font-medium text-slate-700">
                 {property.type}
               </div>
             </div>
@@ -102,7 +102,7 @@ export default function PropertyGrid() {
                   {property.location}
                 </div>
               </div>
-              <button className={`p-2.5 rounded-md transition-colors ${property.active ? 'bg-blue-600 text-white shadow-sm' : 'bg-blue-50 text-blue-600 hover:bg-blue-100'}`}>
+              <button className={`p-2.5 rounded-md transition-colors ${property.active ? 'bg-blue-600 text-white' : 'bg-blue-50 text-blue-600 hover:bg-blue-100'}`}>
                 <Bookmark size={18} className={property.active ? 'fill-current' : ''} />
               </button>
             </div>

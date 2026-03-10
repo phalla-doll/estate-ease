@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Navbar() {
   return (
-    <nav className="bg-white px-8 py-4 flex items-center justify-between shadow-sm sticky top-0 z-20">
+    <nav className="bg-white px-8 py-4 flex items-center justify-between border-b border-slate-100 sticky top-0 z-20">
       <div className="flex items-center gap-3">
         <div className="bg-slate-900 text-white p-2.5 rounded-lg">
           <Home size={22} />

@@ -12,7 +12,7 @@ export default function Page() {
         <main className="flex-1 overflow-y-auto pb-8 scrollbar-hide pr-2">
           <PropertyGrid />
         </main>
-        <aside className="w-[440px] flex-shrink-0 overflow-y-auto bg-white rounded-xl p-7 shadow-sm border border-slate-100/30 h-[calc(100vh-120px)] sticky top-8 scrollbar-hide">
+        <aside className="w-[440px] flex-shrink-0 overflow-y-auto bg-white rounded-xl p-7 shadow-[0_2px_10px_rgba(0,0,0,0.02)] border border-slate-100/30 h-[calc(100vh-120px)] sticky top-8 scrollbar-hide">
           <PropertyDetails />
         </aside>
       </div>
