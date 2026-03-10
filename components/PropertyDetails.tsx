@@ -6,7 +6,7 @@ export default function PropertyDetails() {
     <div className="flex flex-col h-full">
       {/* Images */}
       <div className="grid grid-cols-3 gap-3.5 mb-8">
-        <div className="col-span-2 relative h-[240px] rounded-xl overflow-hidden">
+        <div className="col-span-2 relative h-[240px] rounded-3xl overflow-hidden">
           <Image 
             src="https://picsum.photos/seed/house3/600/400" 
             alt="Main" 
@@ -16,7 +16,7 @@ export default function PropertyDetails() {
           />
         </div>
         <div className="col-span-1 flex flex-col gap-3.5">
-          <div className="relative flex-1 rounded-xl overflow-hidden">
+          <div className="relative flex-1 rounded-3xl overflow-hidden">
             <Image 
               src="https://picsum.photos/seed/room1/300/200" 
               alt="Room 1" 
@@ -25,7 +25,7 @@ export default function PropertyDetails() {
               referrerPolicy="no-referrer"
             />
           </div>
-          <div className="relative flex-1 rounded-xl overflow-hidden">
+          <div className="relative flex-1 rounded-3xl overflow-hidden">
             <Image 
               src="https://picsum.photos/seed/room2/300/200" 
               alt="Room 2" 
@@ -68,38 +68,38 @@ export default function PropertyDetails() {
 
       {/* Features */}
       <div className="flex flex-wrap gap-3.5 mb-10">
-        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-full text-[14.5px] text-slate-700 font-medium">
           <DoorOpen size={18} className="text-slate-400" /> 6 Rooms
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-full text-[14.5px] text-slate-700 font-medium">
           <Bed size={18} className="text-slate-400" /> 4 Beds
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-full text-[14.5px] text-slate-700 font-medium">
           <Bath size={18} className="text-slate-400" /> 2 Baths
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-full text-[14.5px] text-slate-700 font-medium">
           <Utensils size={18} className="text-slate-400" /> 2 Kitchen
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-full text-[14.5px] text-slate-700 font-medium">
           <Maximize size={18} className="text-slate-400" /> 2.820 sqft
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-full text-[14.5px] text-slate-700 font-medium">
           <Car size={18} className="text-slate-400" /> 1 Garage
         </div>
       </div>
 
       {/* Actions */}
       <div className="flex gap-4 mb-10">
-        <button className="flex-1 py-3.5 bg-blue-50 text-blue-600 font-medium text-[15px] rounded-lg hover:bg-blue-100 transition-colors">
+        <button className="flex-1 py-3.5 bg-blue-50 text-blue-600 font-medium text-[15px] rounded-full hover:bg-blue-100 transition-colors">
           Contact Agent
         </button>
-        <button className="flex-1 py-3.5 bg-blue-600 text-white font-medium text-[15px] rounded-lg hover:bg-blue-700 transition-colors">
+        <button className="flex-1 py-3.5 bg-blue-600 text-white font-medium text-[15px] rounded-full hover:bg-blue-700 transition-colors">
           Order Now
         </button>
       </div>
 
       {/* Map */}
-      <div className="relative h-[200px] rounded-xl overflow-hidden mt-auto border border-slate-100">
+      <div className="relative h-[200px] rounded-3xl overflow-hidden mt-auto border border-slate-100">
         <Image 
           src="https://picsum.photos/seed/map/600/300" 
           alt="Map" 
@@ -128,8 +128,8 @@ export default function PropertyDetails() {
         </div>
 
         {/* Selected Map Pin Info */}
-        <div className="absolute top-[30%] left-[30%] bg-white p-2.5 rounded-lg shadow-[0_8px_24px_rgba(0,0,0,0.06)] flex items-center gap-3 max-w-[220px] border border-slate-100">
-          <div className="relative w-12 h-10 rounded-md overflow-hidden flex-shrink-0">
+        <div className="absolute top-[30%] left-[30%] bg-white p-2.5 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.06)] flex items-center gap-3 max-w-[220px] border border-slate-100 pr-5">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
             <Image src="https://picsum.photos/seed/house3/100/80" alt="Thumb" fill className="object-cover" referrerPolicy="no-referrer" />
           </div>
           <div className="min-w-0 pr-2">
