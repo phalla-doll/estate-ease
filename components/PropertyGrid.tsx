@@ -76,10 +76,10 @@ export default function PropertyGrid() {
       {properties.map((property) => (
         <div 
           key={property.id} 
-          className={`bg-white rounded-3xl overflow-hidden shadow-sm border transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${property.active ? 'border-blue-500 ring-1 ring-blue-500' : 'border-slate-100'}`}
+          className={`bg-white rounded-xl overflow-hidden shadow-sm border transition-all duration-300 hover:-translate-y-1 hover:shadow-md ${property.active ? 'border-blue-500 ring-1 ring-blue-500' : 'border-slate-100/50'}`}
         >
           <div className="relative h-[220px] w-full p-3.5">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden">
+            <div className="relative w-full h-full rounded-lg overflow-hidden">
               <Image 
                 src={property.image} 
                 alt={property.title} 
@@ -87,7 +87,7 @@ export default function PropertyGrid() {
                 className="object-cover transition-transform duration-500 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-[13px] font-bold text-slate-700 shadow-sm">
+              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-md text-[13px] font-medium text-slate-700 shadow-sm">
                 {property.type}
               </div>
             </div>
@@ -96,22 +96,22 @@ export default function PropertyGrid() {
           <div className="p-5 pt-2">
             <div className="flex justify-between items-start mb-3">
               <div>
-                <h3 className="font-bold text-slate-900 text-[19px] tracking-tight">{property.title}</h3>
+                <h3 className="font-medium text-slate-900 text-[19px] tracking-tight">{property.title}</h3>
                 <div className="flex items-center text-slate-500 text-[13px] font-medium mt-1.5">
                   <MapPin size={14} className="mr-1.5 text-blue-600" />
                   {property.location}
                 </div>
               </div>
-              <button className={`p-2.5 rounded-full transition-colors ${property.active ? 'bg-blue-600 text-white shadow-sm' : 'bg-blue-50 text-blue-600 hover:bg-blue-100'}`}>
+              <button className={`p-2.5 rounded-md transition-colors ${property.active ? 'bg-blue-600 text-white shadow-sm' : 'bg-blue-50 text-blue-600 hover:bg-blue-100'}`}>
                 <Bookmark size={18} className={property.active ? 'fill-current' : ''} />
               </button>
             </div>
             
-            <div className="flex justify-between items-center mt-5 pt-4 border-t border-slate-100/80">
-              <div className="font-bold text-[22px] text-slate-900 tracking-tight">
+            <div className="flex justify-between items-center mt-5 pt-4 border-t border-slate-100/50">
+              <div className="font-medium text-[22px] text-slate-900 tracking-tight">
                 $ {property.price.toFixed(2)}<span className="text-[14px] font-medium text-slate-400">/month</span>
               </div>
-              <div className="flex items-center gap-1.5 text-[14px] font-bold text-slate-700">
+              <div className="flex items-center gap-1.5 text-[14px] font-medium text-slate-700">
                 <Star size={18} className="text-yellow-400 fill-yellow-400" />
                 {property.rating}<span className="text-slate-400 font-medium">/{property.reviews}</span>
               </div>

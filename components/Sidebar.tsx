@@ -4,13 +4,13 @@ export default function Sidebar() {
   return (
     <div className="w-[280px] flex-shrink-0 flex flex-col gap-6">
       <div className="flex items-center justify-between px-1">
-        <h2 className="text-[17px] font-bold text-slate-900 tracking-tight">Custom Filter</h2>
-        <button className="text-sm text-blue-600 font-semibold hover:text-blue-700 transition-colors">Clear all</button>
+        <h2 className="text-[17px] font-medium text-slate-900 tracking-tight">Custom Filter</h2>
+        <button className="text-sm text-blue-600 font-medium hover:text-blue-700 transition-colors">Clear all</button>
       </div>
 
       {/* Location */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-2xl shadow-sm border border-slate-100/50">
+        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-xl shadow-sm border border-slate-100/30">
           <div className="flex items-center gap-3 text-slate-700">
             <MapPin size={18} className="text-slate-400" />
             <span className="text-[15px] font-medium">Location</span>
@@ -43,7 +43,7 @@ export default function Sidebar() {
 
       {/* Price Range */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-2xl shadow-sm border border-slate-100/50">
+        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-xl shadow-sm border border-slate-100/30">
           <div className="flex items-center gap-3 text-slate-700">
             <Banknote size={18} className="text-slate-400" />
             <span className="text-[15px] font-medium">Price Range</span>
@@ -83,7 +83,7 @@ export default function Sidebar() {
           </label>
           
           <div className="pt-4 px-2 pb-2">
-            <div className="flex justify-between text-xs text-slate-500 mb-3 font-semibold px-1">
+            <div className="flex justify-between text-xs text-slate-500 mb-3 font-medium px-1">
               <span>$10K</span>
               <span>$50K</span>
             </div>
@@ -98,7 +98,7 @@ export default function Sidebar() {
 
       {/* Land Area */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-2xl shadow-sm border border-slate-100/50">
+        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-xl shadow-sm border border-slate-100/30">
           <div className="flex items-center gap-3 text-slate-700">
             <LayoutGrid size={18} className="text-slate-400" />
             <span className="text-[15px] font-medium">Land Area</span>
@@ -109,19 +109,19 @@ export default function Sidebar() {
         </div>
         <div className="flex gap-3 px-1">
           <div className="relative flex-1">
-            <input type="text" placeholder="Min" className="w-full bg-white border border-slate-200 rounded-xl py-3 pl-4 pr-10 text-[15px] font-medium placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" />
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-400">sq ft</span>
+            <input type="text" placeholder="Min" className="w-full bg-white border border-slate-100 rounded-lg py-3 pl-4 pr-10 text-[15px] font-medium placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" />
+            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-medium text-slate-400">sq ft</span>
           </div>
           <div className="relative flex-1">
-            <input type="text" placeholder="Max" className="w-full bg-white border border-slate-200 rounded-xl py-3 pl-4 pr-10 text-[15px] font-medium placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" />
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-400">sq ft</span>
+            <input type="text" placeholder="Max" className="w-full bg-white border border-slate-100 rounded-lg py-3 pl-4 pr-10 text-[15px] font-medium placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" />
+            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-medium text-slate-400">sq ft</span>
           </div>
         </div>
       </div>
 
       {/* Type Of Place */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-2xl shadow-sm border border-slate-100/50">
+        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-xl shadow-sm border border-slate-100/30">
           <div className="flex items-center gap-3 text-slate-700">
             <Home size={18} className="text-slate-400" />
             <span className="text-[15px] font-medium">Type Of Place</span>
@@ -172,7 +172,7 @@ export default function Sidebar() {
 
       {/* Amenities */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-2xl shadow-sm border border-slate-100/50">
+        <div className="flex items-center justify-between bg-white px-5 py-3.5 rounded-xl shadow-sm border border-slate-100/30">
           <div className="flex items-center gap-3 text-slate-700">
             <Layers size={18} className="text-slate-400" />
             <span className="text-[15px] font-medium">Amenities</span>
@@ -182,9 +182,9 @@ export default function Sidebar() {
           </button>
         </div>
         <div className="flex flex-wrap gap-2.5 px-1">
-          <button className="px-5 py-2.5 bg-blue-600 text-white text-[15px] rounded-full font-semibold shadow-sm hover:bg-blue-700 transition-colors">Garden</button>
-          <button className="px-5 py-2.5 bg-white border border-slate-200 text-slate-600 text-[15px] rounded-full font-semibold hover:bg-slate-50 hover:text-slate-900 transition-colors">Gym</button>
-          <button className="px-5 py-2.5 bg-white border border-slate-200 text-slate-600 text-[15px] rounded-full font-semibold hover:bg-slate-50 hover:text-slate-900 transition-colors">Garage</button>
+          <button className="px-5 py-2.5 bg-blue-600 text-white text-[15px] rounded-md font-medium shadow-sm hover:bg-blue-700 transition-colors">Garden</button>
+          <button className="px-5 py-2.5 bg-white border border-slate-100 text-slate-600 text-[15px] rounded-md font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors">Gym</button>
+          <button className="px-5 py-2.5 bg-white border border-slate-100 text-slate-600 text-[15px] rounded-md font-medium hover:bg-slate-50 hover:text-slate-900 transition-colors">Garage</button>
         </div>
       </div>
     </div>
