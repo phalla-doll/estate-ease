@@ -113,7 +113,7 @@ export default function PropertyDetails() {
       </div>
 
       {/* Map */}
-      <div className="relative h-[200px] rounded-3xl overflow-hidden mt-auto border border-slate-100">
+      <div className="relative h-[320px] rounded-3xl overflow-hidden mt-auto border border-slate-100">
         <Map
           initialViewState={{
             longitude: 106.8456,
