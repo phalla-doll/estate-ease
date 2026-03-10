@@ -5,8 +5,8 @@ export default function PropertyDetails() {
   return (
     <div className="flex flex-col h-full">
       {/* Images */}
-      <div className="grid grid-cols-3 gap-3 mb-6">
-        <div className="col-span-2 relative h-[220px] rounded-xl overflow-hidden">
+      <div className="grid grid-cols-3 gap-3.5 mb-8">
+        <div className="col-span-2 relative h-[240px] rounded-xl overflow-hidden">
           <Image 
             src="https://picsum.photos/seed/house3/600/400" 
             alt="Main" 
@@ -15,7 +15,7 @@ export default function PropertyDetails() {
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="col-span-1 flex flex-col gap-3">
+        <div className="col-span-1 flex flex-col gap-3.5">
           <div className="relative flex-1 rounded-xl overflow-hidden">
             <Image 
               src="https://picsum.photos/seed/room1/300/200" 
@@ -38,10 +38,10 @@ export default function PropertyDetails() {
       </div>
 
       {/* Header */}
-      <div className="flex justify-between items-start mb-6">
+      <div className="flex justify-between items-start mb-8">
         <div>
-          <h2 className="text-[22px] font-medium text-slate-900 tracking-tight">Midnight Ridge Villa</h2>
-          <div className="flex items-center text-slate-500 text-[14px] font-medium mt-2">
+          <h2 className="text-[24px] font-medium text-slate-900 tracking-tight">Midnight Ridge Villa</h2>
+          <div className="flex items-center text-slate-500 text-[15px] font-medium mt-2.5">
             <MapPin size={16} className="mr-1.5 text-blue-600" />
             440 Thamrin Jakarta, Indonesia
           </div>
@@ -52,48 +52,48 @@ export default function PropertyDetails() {
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-slate-100 mb-6">
-        <button className="flex-1 pb-3 text-[15px] font-medium text-slate-900 border-b-2 border-blue-600">Overview</button>
-        <button className="flex-1 pb-3 text-[15px] font-medium text-slate-400 hover:text-slate-600 transition-colors">Reviews</button>
-        <button className="flex-1 pb-3 text-[15px] font-medium text-slate-400 hover:text-slate-600 transition-colors">About</button>
+      <div className="flex border-b border-slate-100 mb-8">
+        <button className="flex-1 pb-3.5 text-[15px] font-medium text-slate-900 border-b-2 border-blue-600">Overview</button>
+        <button className="flex-1 pb-3.5 text-[15px] font-medium text-slate-400 hover:text-slate-600 transition-colors">Reviews</button>
+        <button className="flex-1 pb-3.5 text-[15px] font-medium text-slate-400 hover:text-slate-600 transition-colors">About</button>
       </div>
 
       {/* Description */}
-      <div className="mb-7">
-        <h3 className="text-[15px] font-medium text-slate-900 mb-3">Description :</h3>
-        <p className="text-[14px] text-slate-500 leading-relaxed font-medium">
+      <div className="mb-8">
+        <h3 className="text-[16px] font-medium text-slate-900 mb-3.5">Description :</h3>
+        <p className="text-[14.5px] text-slate-500 leading-relaxed font-medium">
           Welcome to Midnight Ridge Villa 🏡 Experience a peaceful escape at Midnight Ridge Villa, a modern retreat set on a quiet hillside with stunning views of valleys and starry nights.
         </p>
       </div>
 
       {/* Features */}
-      <div className="flex flex-wrap gap-3 mb-8">
-        <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-50 border border-slate-100/50 rounded-lg text-[14px] text-slate-700 font-medium">
+      <div className="flex flex-wrap gap-3.5 mb-10">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
           <DoorOpen size={18} className="text-slate-400" /> 6 Rooms
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-50 border border-slate-100/50 rounded-lg text-[14px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
           <Bed size={18} className="text-slate-400" /> 4 Beds
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-50 border border-slate-100/50 rounded-lg text-[14px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
           <Bath size={18} className="text-slate-400" /> 2 Baths
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-50 border border-slate-100/50 rounded-lg text-[14px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
           <Utensils size={18} className="text-slate-400" /> 2 Kitchen
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-50 border border-slate-100/50 rounded-lg text-[14px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
           <Maximize size={18} className="text-slate-400" /> 2.820 sqft
         </div>
-        <div className="flex items-center gap-2.5 px-4 py-2 bg-slate-50 border border-slate-100/50 rounded-lg text-[14px] text-slate-700 font-medium">
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-50 border border-slate-100/50 rounded-lg text-[14.5px] text-slate-700 font-medium">
           <Car size={18} className="text-slate-400" /> 1 Garage
         </div>
       </div>
 
       {/* Actions */}
-      <div className="flex gap-4 mb-8">
-        <button className="flex-1 py-3 bg-blue-50 text-blue-600 font-medium text-[15px] rounded-lg hover:bg-blue-100 transition-colors">
+      <div className="flex gap-4 mb-10">
+        <button className="flex-1 py-3.5 bg-blue-50 text-blue-600 font-medium text-[15px] rounded-lg hover:bg-blue-100 transition-colors">
           Contact Agent
         </button>
-        <button className="flex-1 py-3 bg-blue-600 text-white font-medium text-[15px] rounded-lg hover:bg-blue-700 transition-colors">
+        <button className="flex-1 py-3.5 bg-blue-600 text-white font-medium text-[15px] rounded-lg hover:bg-blue-700 transition-colors">
           Order Now
         </button>
       </div>
